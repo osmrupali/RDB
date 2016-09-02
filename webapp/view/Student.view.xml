@@ -1,0 +1,126 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="ResultDisplay.controller.Student"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<App>
+		<pages>
+			<Page title="Student" showNavButton="true" navButtonPress="onNavBack">
+				<headerContent>
+					<Toolbar>
+						<Image src="images/saplogo.png" densityAware="false" width="8em" class="sapUiSmallMarginBegin"/>
+						<ToolbarSpacer/>
+					</Toolbar>
+				</headerContent>
+					<content>
+					<HBox>
+					<VBox class="sapUiMediumMarginBeginEnd sapUiLargeMarginTop sapUiSmallMarginBottom" >
+						<Label text="Rupali Sharma" design="Bold" class="sapThemeFontSize"></Label>
+						<Label text="HR VT India"></Label>
+                    	<Label text="i330052" ></Label>
+                	</VBox>
+                	
+                	<HBox fitContainer="true" height="1px"></HBox>
+                	</HBox>
+                	<VBox justifyContent="Center">
+                		<Table id="idResult"
+							inset="false"
+							items="{
+							path: '/recipient',
+							sorter: {
+							path: 'name'
+							}
+							}">
+		<columns>
+			<Column
+				minScreenWidth="Tablet"
+				demandPopin="true">
+				<Text text="" />
+			</Column>
+			<Column
+				minScreenWidth="Tablet"
+				demandPopin="true"
+				hAlign="Center">
+				
+					<Text text="Marks" level="h2"  class="sapUiSmallMarginBottom"/>
+				
+				
+			</Column>
+			<Column
+				minScreenWidth="Tablet"
+				demandPopin="true"
+				hAlign="Center">
+				
+					<Text text="Total Marks" level="h2"  class="sapUiSmallMarginBottom"/>
+				
+			</Column>
+			<Column
+				minScreenWidth="Tablet"
+				demandPopin="true"
+				hAlign="Center">
+				
+					<Text text="Grade" level="h2"  class="sapUiSmallMarginBottom"/>
+				
+			</Column>
+			<Column
+				minScreenWidth="Tablet"
+				demandPopin="true"
+				hAlign="Center">
+			
+					<Text text="Subject 4" level="h2"  class="sapUiSmallMarginBottom"/>
+				
+			</Column>
+		</columns>
+		<items>
+			<ColumnListItem>
+				<cells>
+					<ObjectIdentifier
+						title="{name}"
+						text="{id}"/>
+					<Text
+						text="{s1}" />
+					<Text
+						text="{ss1}" />
+					<Text
+						text="{g1}" />
+					
+					<!--<ObjectNumber
+						number="{WeightMeasure}"
+						unit="{WeightUnit}"
+						state="{
+							path: 'WeightMeasure',
+							formatter: 'sap.m.sample.Table.Formatter.weightState'
+						}" />
+					<ObjectNumber
+							number="{
+								parts:[{path:'Price'},{path:'CurrencyCode'}],
+								type: 'sap.ui.model.type.Currency',
+								formatOptions: {showMeasure: false}
+							}"
+							unit="{CurrencyCode}" />-->
+				</cells>
+			</ColumnListItem>
+		</items>
+	</Table>
+                	</VBox>
+					<HBox fitContainer="true" height="1px"></HBox>
+							
+
+                </content>
+				<footer>
+					<Toolbar>
+								<ToolbarSpacer/>
+								<VBox>
+									<HBox>
+										<Label text="Total CGPA:"></Label>
+										<Text text="{tot}" class="sapUiSmallMarginEnd sapUiSmallMarginBegin"></Text>
+									</HBox>
+									<HBox>
+										<Label text="Result:"></Label>
+										<Text text="Pass" class="sapUiSmallMarginEnd sapUiSmallMarginBegin"></Text>
+										</HBox>
+								</VBox>
+								
+					</Toolbar>
+				</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

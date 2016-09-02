@@ -1,0 +1,72 @@
+<mvc:View 
+controllerName="QuickStartApplication.controller.Result"
+	xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns="sap.ui.table"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:u="sap.ui.unified"
+	xmlns:c="sap.ui.core"
+	xmlns:m="sap.m"
+	xmlns:tnt="sap.tnt">
+	<m:Page
+		showHeader="false"
+		enableScrolling="false"
+		class="sapUiContentPadding">
+		<m:content>
+			
+			<Table
+				rows="{/recipient}"
+				title="Batch 2"
+				selectionMode="MultiToggle"
+				>
+				<columns>
+					<Column width="11rem">
+						<m:Label text="Id" />
+						<template>
+							<m:Text text="{id}" valueLiveUpdate="true"/>
+						</template>
+					</Column>
+					<Column width="11rem">
+						<m:Label text="Name" />
+						<template>
+							<m:Text text="{name}" valueLiveUpdate="true"/>
+						</template>
+					</Column>
+					<Column width="11rem">
+						<m:Label text="Subject 1" />
+						<template>
+							<m:Text text="{s1}" valueLiveUpdate="true" />
+						</template>
+					</Column>
+					<Column width="11rem">
+						<m:Label text="Subject 2" />
+						<template>
+							<m:Text text="{s2}" valueLiveUpdate="true"/>
+						</template>
+					</Column>
+					<Column width="11rem">
+						<m:Label text="Subject 3" />
+						<template>
+							<m:Text text="{s3}" valueLiveUpdate="true"/>
+						</template>
+					</Column>
+					<Column width="11rem">
+						<m:Label text="Subject 4" />
+						<template>
+							<m:Text text="{s4}" valueLiveUpdate="true"/>
+						</template>
+					</Column>
+					
+					<Column width="11rem">
+						<m:Label text="Total CGPA" />
+						<template>
+							<m:Text text="{tot}" valueLiveUpdate="true"/>
+						</template>
+					</Column>
+					
+					
+					
+				</columns>
+			</Table>
+		</m:content>
+	</m:Page>
+</mvc:View>
