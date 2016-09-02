@@ -1,0 +1,35 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="ResultDisplay.controller.Welcome"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<App>
+		<pages>
+				<Page>
+					<headerContent>
+					<Toolbar>
+						<Image src="images/saplogo.png" densityAware="false" width="8em" class="sapUiSmallMarginBegin"/>
+						<ToolbarSpacer/>
+					</Toolbar>
+				</headerContent>
+				<Panel class="sapUiLargeMarginTopBottom sapUiLargeMarginBeginEnd" width="auto" >
+				<content>
+				<HBox justifyContent="Center" fitContainer="true">
+					<VBox justifyContent="Center">
+						
+						<Image src="images/scholar.png" densityAware="false" width="14em"/>
+						<Text class="sapThemeText" text="Results for Scholars 2016 batch has been announced!" ></Text>
+						<HBox justifyContent="End" fitContainer="true">
+                    	<Button  text="click to see results>>" press="openResultPage" lite="true" type="Emphasized"/>
+                    	</HBox>
+                	</VBox>
+                </HBox>
+				</content>
+				</Panel>
+				<footer>
+					<Toolbar>
+						<ToolbarSpacer/>
+							<Text text="Copyright © 2016-17 Scholars" class="sapUiSmallMarginEnd"></Text>
+					</Toolbar>
+				</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

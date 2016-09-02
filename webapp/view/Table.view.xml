@@ -1,0 +1,111 @@
+<mvc:View
+	controllerName="ResultDisplay.controller.Table"
+	xmlns:l="sap.ui.layout"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m">
+	<Toolbar>
+		
+						<Image src="images/saplogo.png" densityAware="false" width="7em" />
+						<ToolbarSpacer/>
+						<Text text="Result Display Board" class="sapThemeText sapUiTinyMarginTopBottom sapUiLargeMarginEnd"></Text>
+						<ToolbarSpacer/>
+						
+	</Toolbar>
+	<Toolbar>
+            <ToolbarSpacer/>
+            <SearchField width="25%" search="onFilterResults" selectOnFocus="false"/>
+         </Toolbar>
+	<Page showNavButton="true" navButtonPress="onNavBack" titleLevel="H1">
+				
+	<content>
+	<Table id="results"
+		inset="false"
+		items="{
+			path: '/recipient',
+			sorter: {
+				path: 'name'
+			}
+		}" class="sapUiSmallMarginBottom">
+		<headerToolbar>
+         
+      </headerToolbar>
+		
+		<columns>
+			<Column
+				minScreenWidth="Tablet"
+				demandPopin="true">
+				<Text text="Student" />
+			</Column>
+			<Column
+				minScreenWidth="Tablet"
+				demandPopin="true"
+				hAlign="Center">
+				<Text text="Subject1" />
+			</Column>
+			<Column
+				minScreenWidth="Tablet"
+				demandPopin="true"
+				hAlign="Center">
+				<Text text="Subject2" />
+			</Column>
+			<Column
+				minScreenWidth="Tablet"
+				demandPopin="true"
+				hAlign="Center">
+				<Text text="Subject3" />
+			</Column>
+			<Column
+				minScreenWidth="Tablet"
+				demandPopin="true"
+				hAlign="Center">
+				<Text text="Subject4" />
+			</Column>
+			<Column
+				hAlign="Right">
+				<Text text="CGPA" />
+			</Column>
+		</columns>
+		<items>
+			<ColumnListItem type="Navigation" press="onResultPress">
+				<cells>
+					<ObjectIdentifier
+						title="{name}"
+						text="{id}"/>
+					<Text
+						text="{s1}" />
+					<Text
+						text="{s2}" />
+					<Text
+						text="{s3}" />
+					<Text
+						text="{s4}" />
+					<ObjectNumber
+						number="{tot}"
+						/>
+					<!--<ObjectNumber
+						number="{WeightMeasure}"
+						unit="{WeightUnit}"
+						state="{
+							path: 'WeightMeasure',
+							formatter: 'sap.m.sample.Table.Formatter.weightState'
+						}" />
+					<ObjectNumber
+							number="{
+								parts:[{path:'Price'},{path:'CurrencyCode'}],
+								type: 'sap.ui.model.type.Currency',
+								formatOptions: {showMeasure: false}
+							}"
+							unit="{CurrencyCode}" />-->
+				</cells>
+			</ColumnListItem>
+		</items>
+	</Table>
+	</content>
+	<footer>
+					<Toolbar>
+						<ToolbarSpacer/>
+							<Text text="Copyright © 2016-17 Scholars" class="sapUiSmallMarginEnd"></Text>
+					</Toolbar>
+				</footer>
+	</Page>
+</mvc:View>

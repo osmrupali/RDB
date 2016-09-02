@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta charset="UTF-8">
+
+		<title>ResultDisplay</title>
+
+		<script id="sap-ui-bootstrap"
+			src="../../resources/sap-ui-core.js"
+			data-sap-ui-libs="sap.m"
+			data-sap-ui-theme="sap_bluecrystal"
+			data-sap-ui-compatVersion="edge"
+			data-sap-ui-xx-bindingSyntax="complex"
+			data-sap-ui-resourceroots='{"ResultDisplay": ""}'>
+		</script>
+
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+
+		<script>
+			sap.ui.getCore().attachInit(function() {
+				new sap.m.Shell({
+					app: new sap.ui.core.ComponentContainer({
+						height : "100%",
+						name : "ResultDisplay"
+					})
+				}).placeAt("content");
+				/*sap.ui.localResources("QuickStartApplication");
+				var app=new sap.m.App("idApp",{initialPage:"welcome"});
+				var page1=new sap.ui.view({id:"welcome",viewName:"QuickStartApplication.view.Welcome",type:sap.ui.core.mvc.ViewType.XML});
+				var page2=new sap.ui.view({id:"table",viewName:"QuickStartApplication.view.Table",type:sap.ui.core.mvc.ViewType.XML});
+				app.addPage(page1).addPage(page2);
+				app.placeAt("content");*/
+			});
+		</script>
+	</head>
+
+	<body class="sapUiBody" id="content">
+	</body>
+
+</html>
